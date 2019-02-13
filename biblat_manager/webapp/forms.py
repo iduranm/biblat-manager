@@ -10,7 +10,7 @@ from wtforms import (
     ValidationError)
 
 
-def check_secure_password(form, field):
+def check_secure_password(field):
     strength = safe.check(field.data)
     messages = {
         'password is too short': __('La contraseña es muy corta, la longitud '
